@@ -1,7 +1,7 @@
 //Stats for the user and the goalie. For right now, only have power go against save. User will always win.
 
-const user = {name: 'Connor McDavid', power: Math.random() * 99, points: 0};
-const goalie = {name: 'Craig Anderson', save: 94, points: 0};
+const user = {name: 'Connor McDavid', power: 80, points: 0};
+const goalie = {name: 'Craig Anderson', save: 80, points: 0};
 
 // shotType = 
 //     {
@@ -38,11 +38,29 @@ shootOut = () => {
     }if(user.power < goalie.save) {
         goalie.points ++; 
         alert(`${goalie.name} just made a save and they have ${goalie.points} and you have ${user.points}`);
-    } if (user.shot === goalie.save) {
+    } else  {
         alert('The shot missed! No points are awarded.');
     };
+    if(user.points <= 3  && goalie.points <= 3) {
+        shootOut();
+    } if (user.points === 4 && goalie.points < 4){
+        userWin(); 
+    } if (user.point < 4 && goalie.points){
+        goalieWin(); 
+    }
+};
+
+userWin = () => {
+    alert('You won the shootout! Celebrate with your teammates'); 
 }
 
+goalieWin = () => {
+    alert('You lost'); 
+}
+
+// endGame = () => {
+//     if(user )
+// }
 
 // while (user.points < 4 && goalie.points < 4) {
 
