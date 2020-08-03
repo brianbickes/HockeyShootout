@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(26, 26, 165);
+}
+
+#start {
+    background-color: black;
+    color: white;
+    border-radius: 20%;
+    border: white;
+    align-items: center;
+    box-shadow: whitesmoke;
+    size: 200px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: cornsilk;
+    font-family: 'Poiret One', cursive;
+}
+
+#rink { 
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    size: 50%;
+}

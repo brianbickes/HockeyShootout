@@ -1,6 +1,6 @@
 //Stats for the user and the goalie. For right now, only have power go against save. User will always win.
 
-const user = {name: 'Connor McDavid', power: 80, points: 0};
+const user = {name: 'Connor McDavid', power: 90, points: 0};
 const goalie = {name: 'Craig Anderson', save: 80, points: 0};
 
 // shotType = 
@@ -17,7 +17,7 @@ console.log(user);
 //Beginning of the game. Player will be directed here and will make a choice of whether or not to enter the shootout. 
 
 const onLoad = () => {
- const choice = prompt(`Hello there ${user.name}! You're shot power is ${user.power}. Type 's' to start.`, 's');
+ const choice = prompt(`Hello there ${user.name}! Your shot power is ${user.power}. Type 's' to start.`, 's');
     if (choice.toLowerCase().trim() === 's'){
         userChoice(); 
     };
@@ -52,7 +52,11 @@ shootOut = () => {
 
 userWin = () => {
     alert('You won the shootout! Celebrate with your teammates'); 
-}
+    const choice = prompt("Would you like to play again?, Yes or No?");
+    if (choice.toLowerCase().trim() === 'y' || 'yes' || 'Yes' || 'Y') {
+        onLoad(); 
+    } 
+};
 
 goalieWin = () => {
     alert('You lost'); 
@@ -66,4 +70,3 @@ goalieWin = () => {
 
 // }
 
-onLoad(); 
