@@ -17,11 +17,14 @@ h1 {
     text-align: center;
     color: cornsilk;
     font-family: 'Poiret One', cursive;
+    border: 20px;
+    border-color: thistle;
 }
 
-#rink { 
-    align-items: center;
+#rinkpic { 
+   position: absolute;;
     width: 600px;
     height: 400px;
     size: 50%;
 }
+
