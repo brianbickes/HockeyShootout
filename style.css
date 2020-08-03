@@ -22,9 +22,17 @@ h1 {
 }
 
 #rinkpic { 
-   position: absolute;;
-    width: 600px;
-    height: 400px;
-    size: 50%;
+    flex-direction: row;
+    background-position: center;
+    padding: 40px 400px 40px 400px; 
 }
 
+#userPoints {
+    color: aliceblue;
+}
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 150px 0px 150px;
+    
+}
