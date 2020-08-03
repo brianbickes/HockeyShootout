@@ -17,7 +17,7 @@ const goalie = [
 //     }
 // ];
 console.log(user);
-
+console.log(goalie[0])
 
 //Beginning of the game. Player will be directed here and will make a choice of whether or not to enter the shootout. 
 
