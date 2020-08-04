@@ -3,9 +3,12 @@ body {
     border-width: 40px;
 }
 
+#title {
+
+}
+
 #start {
-    background-color: black;
-    color: white;
+    color: black;
     border-radius: 20%;
     border: white;
     align-items: center;
@@ -44,4 +47,30 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     font-family: 'Poiret One', cursive;
+}
+
+#text {
+    color: cornsilk;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Poiret One', cursive;
+}
+
+#shoot {
+    border-radius: 20%;
+    background-color: black;
+    color: cornsilk;
+    height: 50px;
+    width: 100px; 
+}
+
+#start {
+    height: 50px;
+    width: 100px; 
+}
+
+#restart {
+    height: 50px;
+    width: 100px; 
+    border-radius: 20px;
 }
