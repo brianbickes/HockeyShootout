@@ -38,3 +38,10 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+#scoreboard {
+    color: cornsilk;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Poiret One', cursive;
+}

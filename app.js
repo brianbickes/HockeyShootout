@@ -6,7 +6,8 @@ const goalie = [
     { name: 'John Gibson', save: 75, points: 0 },
     { name: 'Pekka Rinne', save: 80, points: 0 },
 ];
-const round = 0;
+
+const round = [1, 2, 3, 4];
 
 console.log(user);
 console.log(goalie)
@@ -64,6 +65,7 @@ const shootOut = () => {
         if (choice === 'Yes') {
             //shifts goalie to the next in the array. Next goalie is more difficult than the previous.
             goalie.shift();
+            round.shift();
             user.points = 0;
         }
     } if (user.points === 4 && goalie.points < 4 && goalie.length === 0) {
@@ -71,6 +73,12 @@ const shootOut = () => {
     } if (user.points < 4 && goalie.points === 4) {
         goalieWin();
     }
+
+    //Counter that will show up on screen to display current user points, goalie points and current round. 
+    const $div = $("#scoreboard");
+    $h2 = $('#pointRound');
+    $h2.text(`Goals: ${user.points} Saves: ${goalie[0].points} Current Round: ${round[0]}`);
+    $div.append($h2);
 };
 
 
@@ -80,6 +88,3 @@ const shootOut = () => {
 
 
 
-// const $div = $("<div>").attr("id", "userPoints")
-// $div.text(`<h2>${user.points}</h2>`).setTimeout(1000);
-// $('#userPoints').append($div);
