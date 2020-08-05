@@ -6,6 +6,11 @@ const goalie = [
     { name: 'John Gibson', save: 75, points: 0 },
     { name: 'Pekka Rinne', save: 78, points: 0 },
 ];
+//buttons for start and shoot mechanics
+const $start = $('#start');
+const $shoot = $('#shoot');
+$start.on("click", function () { onLoad() });
+$shoot.on("click", function () { shootOut() });
 
 const list = ["You scored! Great job!", "Off the goalie's glove and in! You scored!", "You went five-hole and scored!", "You beat the goalie clean! Nice shot.", "Wow! The goalie didn't even see that"]
 function randomList(list) {
@@ -82,9 +87,10 @@ const shootOut = () => {
 
     //Counter that will show up on screen to display current user points, goalie points and current round. 
     const $div = $("#scoreboard");
-    $h2 = $('#pointRound');
+    const $h2 = $('#pointRound');
     $h2.text(`Goals: ${user.points} Saves: ${goalie[0].points} Current Round: ${round[0]}`);
     $div.append($h2);
+
 
 
 };
