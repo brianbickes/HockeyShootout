@@ -1,5 +1,5 @@
 //Stats for the user and the goalie. For right now, only have power go against save. User will always win.
-const user = { name: 'Connor McDavid', power: 70, points: 0 };
+const user = { name: 'Connor McDavid', power: 73, points: 0 };
 const goalie = [
     { name: 'Craig Anderson', save: 65, points: 0 },
     { name: 'Marc-Andre Fleury', save: 70, points: 0 },
@@ -49,12 +49,12 @@ checkWin = () => {
 }
 
 const userWin = () => {
-    $h3.text('You won the shootout! Celebrate with your teammates!!!!! CLick Restart if you would like to play again.');
-    $h3.text('Click the "Restart Game" button to play again.');
+    $h3.text('You won the shootout! Celebrate with your teammates!!!!! Click Restart Game if you would like to play again.');
+    
 };
 
 const goalieWin = () => {
-    $h3.text('You lost! Everyone was counting on you but you can redeem yourself. Click Restart to try again.');
+    $h3.text('You lost! Everyone was counting on you but you can redeem yourself. Click Restart Game to try again.');
 };
 
 //Shootout function to determine who gets points. 
@@ -80,8 +80,8 @@ const shootOut = () => {
         } else {
             alert("That's ok. Take a rest and click the shoot button when you are ready.")
         }
-    } if (user.points === 4 && goalie[0].points < 4 && goalie.length === 0) {
-        userWin();
+    } if (goalie.length === 0) {
+        userWin(); 
     } if (user.points < 4 && goalie[0].points === 4) {
         goalieWin();
     }
