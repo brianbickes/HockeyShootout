@@ -61,6 +61,7 @@ const goalieWin = () => {
 const shootOut = () => {
     if (user.power + Math.floor(Math.random() * 30) > goalie[0].save + Math.floor(Math.random() * 15)) {
         user.points++;
+        $('#goalLight').fadeIn(1000).fadeOut(1000);
         $h3.text(randomList(list));
     } if (user.power + Math.floor(Math.random() * 30) < goalie[0].save + Math.floor(Math.random() * 15)) {
         goalie[0].points++;

@@ -24,13 +24,22 @@ h1 {
     border: 20px;
     border-color: thistle;
 }
-
-#rinkpic { 
+.rinkpic { 
     flex-direction: row;
     justify-content: space-evenly;
     padding: 40px 450px 40px 450px; 
 }
 
+#goalLight {
+    display: none; 
+    position: absolute;
+    border-radius: 20%;
+
+}
+
+#rink{ 
+    
+}
 #userPoints {
     color: aliceblue;
 }
