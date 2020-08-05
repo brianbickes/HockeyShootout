@@ -7,7 +7,7 @@ const goalie = [
     { name: 'Pekka Rinne', save: 80, points: 0 },
 ];
 
-const list = ["You scored! Great job!", "Off the goalie's glove and in! You scored!", "You went five-hole and scored!", "You beat the goalie clean! Nice shot.", "Wow! The goalie didn't even see that one!"]
+const list = ["You scored! Great job!", "Off the goalie's glove and in! You scored!", "You went five-hole and scored!", "You beat the goalie clean! Nice shot.", "Wow! The goalie didn't even see that"]
 function randomList(list) {
     return list[Math.floor(Math.random() * list.length)]
 };
@@ -85,6 +85,8 @@ const shootOut = () => {
     $h2 = $('#pointRound');
     $h2.text(`Goals: ${user.points} Saves: ${goalie[0].points} Current Round: ${round[0]}`);
     $div.append($h2);
+
+    
 };
 
 

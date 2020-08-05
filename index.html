@@ -33,6 +33,24 @@
     <div id="userPoints">
         
     </div>
+    <audio controls id="music">
+        <source src="NHL on NBC.mp3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+        
+        <button onclick="play()" type="button">Play </button>
+        <button onclick="pause()" type="button">Pause</button>
+        
+        <script>
+        var myMusic= document.getElementById("music");
+        function play() {
+        myMusic.play();
+        }
+        
+        function pause() {
+        myMusic.pause();
+        }
+        </script>
 </body>
 
 </html>
