@@ -7,6 +7,11 @@ const goalie = [
     { name: 'Pekka Rinne', save: 80, points: 0 },
 ];
 
+const list = ["You scored! Great job!", "Off the goalie's glove and in! You scored!", "You went five-hole and scored!", "You beat the goalie clean! Nice shot.", "Wow! The goalie didn't even see that one!"]
+function randomList(list) {
+    return list[Math.floor(Math.random() * list.length)]
+};
+
 const round = [1, 2, 3, 4];
 
 const $div = $("#textBox");
@@ -39,19 +44,19 @@ checkWin = () => {
 }
 
 const userWin = () => {
-    alert('You won the shootout! Celebrate with your teammates');
-    const choice = alert('Click the "Restart Game" button to play again.');
+    $h3.text('You won the shootout! Celebrate with your teammates!!!!! CLick Restart if you would like to play again.');
+    $h3.text('Click the "Restart Game" button to play again.');
 };
 
 const goalieWin = () => {
-    alert('You lost');
+    $h3.text('You lost! Everyone was counting on you but you can redeem yourself. Click Restart to try again.');
 };
 
 //Shootout function to determine who gets points. 
 const shootOut = () => {
     if (user.power + Math.floor(Math.random() * 30) > goalie[0].save + Math.floor(Math.random() * 15)) {
         user.points++;
-        $h3.text(`You just scored on ${goalie[0].name}!. You have ${user.points} goal and ${goalie[0].name} has made ${goalie[0].points} saves.`);
+        $h3.text(randomList(list));
     } if (user.power + Math.floor(Math.random() * 30) < goalie[0].save + Math.floor(Math.random() * 15)) {
         goalie[0].points++;
         $h3.text(`Ouch! ${goalie[0].name} just robbed you. Get ready to take another shot.`);
@@ -81,7 +86,6 @@ const shootOut = () => {
     $h2.text(`Goals: ${user.points} Saves: ${goalie[0].points} Current Round: ${round[0]}`);
     $div.append($h2);
 };
-
 
 
 

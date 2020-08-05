@@ -27,7 +27,7 @@ h1 {
 
 #rinkpic { 
     flex-direction: row;
-    background-position: center;
+    justify-content: space-evenly;
     padding: 40px 450px 40px 450px; 
 }
 
@@ -74,3 +74,9 @@ h1 {
     width: 100px; 
     border-radius: 20px;
 }
+
+/* #goalLight {
+    border-radius: 50px;
+    height: 20%;
+} */
+
