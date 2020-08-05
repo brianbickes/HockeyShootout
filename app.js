@@ -16,16 +16,15 @@ const list = ["You scored! Great job!", "Off the goalie's glove and in! You scor
 function randomList(list) {
     return list[Math.floor(Math.random() * list.length)]
 };
-
+//Round counter
 const round = [1, 2, 3, 4];
 
+//Jquery for text to appear for the user. 
 const $div = $("#textBox");
 const $h3 = $('#text');
 $div.append($h3);
-
-// console.log(user);
-// console.log(goalie);
 $h3.text('Click Start to begin the game.')
+
 //Beginning of the game. Player will be directed here and will make a choice of whether or not to enter the shootout. 
 const onLoad = () => {
     $h3.text('Hello there! Your number has been called and you are set to face off against a series of goalies in the shootout. Click shoot when you are ready.');
